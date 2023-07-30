@@ -1,0 +1,93 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    flex-direction: column;
+    display: flex; 
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0px 3px 8px #3333334d;
+    width: 90%;
+    max-width: 640px;
+    min-height: 600px;
+    position: relative;
+}
+.card-title {
+    display: flex;
+    border-radius: 1rem 1rem 0 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ae03b4;
+    margin: 0;
+}
+.title-text {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+.message-area {
+    height: 400px;
+    overflow: scroll;
+    margin-bottom: 80px;
+}
+.message-box {
+    max-width: 50%;
+    padding: 1rem;
+    box-shadow: 0px 3px 8px #3333334d;
+    margin: 1rem;
+    border-radius: 1rem;
+    display: flex;
+}
+.user-box {
+    background-color: #ae03b4;
+    color: #fff;
+    border-radius: 1rem;
+    width: 300px;
+    max-width: 50%;
+    display: flex;
+    margin-right: 1rem;
+    word-wrap: break-all;
+    margin-left: auto;
+}
+.input-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fca0ff;
+    border-radius: 0 0 1rem 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.input-area {
+    flex-grow: 0.9;
+    margin: 1rem;
+}
+.input-text {
+    width: 100%;
+    height: 50px;
+}
+.submit-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    padding: 1rem 0.5rem;
+    font-weight: bold;
+    border: 2px solid #ae03b4;
+    background: #ae03b4;
+    color: #fff;
+    border-radius: 100vh;
+    width: 60px;
+    height: 60px;
+    transition: 0.5s;
+}
+.submit-button:hover {
+    background: #fff;
+    color: #ae03b4;
+}
