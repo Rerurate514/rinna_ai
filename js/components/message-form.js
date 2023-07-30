@@ -1,5 +1,4 @@
 export const MessageForm = {
-
     props: {
         pending: {
             type: Boolean,
@@ -14,15 +13,16 @@ export const MessageForm = {
     },
 
     template: `
-    <form class="input-content" @submit.prevent="sendMessage">
-        <div class="input-area">
-            <input 
-                class="input-text" 
-                type="text" placeholder="メッセージを入力する" 
-                v-model="newMessage">
-        </div>
-        <button class="submit-button" :disabled="pending">送信</button>
-    </form>
+        <form class="input-content" @submit.prevent="sendMessage">
+            <div class="input-area">
+                <input 
+                    class="input-text" 
+                    type="text" 
+                    placeholder="メッセージを入力する" 
+                    v-model="newMessage">
+            </div>
+            <button class="submit-button" :disabled="pending">送信</button>
+        </form>
     `,
 
     methods: {
@@ -38,7 +38,6 @@ export const MessageForm = {
             };
             this.$emit('message-sent',message);
             this.newMessage = '';
-        }
-        
-    }
-}
+        },
+    },
+};
