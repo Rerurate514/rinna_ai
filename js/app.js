@@ -2,7 +2,7 @@ import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
 import { MessageList } from './components/message-list.js';
 import { MessageForm } from './components/message-form.js';
 // characterConversationをimport
-//import { ecceConversation } from './actions/ecce.js';
+import { ecceConversation } from './actions/ecce.js';
 
 export const app = createApp({
     components: {
@@ -37,16 +37,16 @@ export const app = createApp({
             }
             this.pending = false;
         },
-        // conversationを記述
-        // async conversation(dialogHistory) {
-        //   const responseText = await ecceConversation(dialogHistory);
-        //   this.messages.push({
-        //     id: Date.now(),
-        //     name: 'rinna',
-        //     sender: 'chatbot',
-        //     content: responseText[0],
-        //   });
-        // },
+        //conversationを記述
+        async conversation(dialogHistory) {
+          const responseText = await ecceConversation(dialogHistory);
+          this.messages.push({
+            id: Date.now(),
+            name: 'rinna',
+            sender: 'chatbot',
+            content: responseText[0],
+          });
+        },
     },
 });
 
